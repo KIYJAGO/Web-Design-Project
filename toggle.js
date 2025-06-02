@@ -1,4 +1,4 @@
-// Navbar Atas
+// Navbar Atas (Arrow)
 function toggleDropdown(id, button) {
 const dropdown = document.getElementById(id);
 const allDropdowns = document.querySelectorAll('.dropdown-content');
@@ -29,28 +29,30 @@ document.addEventListener('click', function (e) {
   }
 });
 
-// Side-Bar
-document.addEventListener('DOMContentLoaded', function() {
+// Side-Bar & MB
+document.addEventListener('DOMContentLoaded', function () {
   const hamburgerButton = document.getElementById('hamburgerButton');
   const sideMenu = document.getElementById('sideMenu');
-  const logoLink = document.getElementById('logoLink');
-    
-    function toggleMenu() {
-      sideMenu.classList.toggle('open');
+  const sideBarLogo = document.getElementById('sideBarLogo');
+  const topBarLogo = document.getElementById('topBarLogo');
+
+  function toggleMenu() {
+    sideMenu.classList.toggle('open');
+  }
+
+  hamburgerButton.addEventListener('click', function (e) {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  function handleLogoClick(e) {
+    if (sideMenu && sideMenu.classList.contains('open')) {
+      sideMenu.classList.remove('open');
     }
-    // Automatic Close
-    hamburgerButton.addEventListener('click', function(e) {
-      e.stopPropagation(); 
-      toggleMenu();
-    });
-  
-    logoLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      if (sideMenu.classList.contains('open')) {
-        sideMenu.classList.remove('open');
-      }
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+  }
+
+  topBarLogo?.addEventListener('click', handleLogoClick);
+  sideBarLogo?.addEventListener('click', handleLogoClick);
 });
 
 // Close Right-Bar
@@ -59,15 +61,3 @@ document.addEventListener('click', function(e) {
     sideMenu.classList.remove('open');
   }
 });
-  
-// Logo Right-Bar
-document.addEventListener("DOMContentLoaded", function () {
-  const logo = document.getElementById("logoLink");
-
-  logo.addEventListener("click", function (e) {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-});
-
-//
