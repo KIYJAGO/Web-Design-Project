@@ -61,3 +61,11 @@ document.addEventListener('click', function(e) {
     sideMenu.classList.remove('open');
   }
 });
+
+// Contact Features
+document.querySelectorAll('.faq-btn').forEach(btn => 
+  { 
+    btn.addEventListener('click', () => { 
+      const content = btn.nextElementSibling; const icon = btn.querySelector('svg'); content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px'; icon.classList.toggle('rotate-180'); 
+    }); 
+  }); 
