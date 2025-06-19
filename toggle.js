@@ -1,31 +1,34 @@
 // Navbar Atas (Arrow)
 function toggleDropdown(id, button) {
-const dropdown = document.getElementById(id);
-const allDropdowns = document.querySelectorAll('.dropdown-content');
-const allArrows = document.querySelectorAll('.arrow');
+  const dropdown = document.getElementById(id);
+  const arrow = button.querySelector('.arrow');
+  const allDropdowns = document.querySelectorAll('.dropdown');
+  const allArrows = document.querySelectorAll('.arrow');
 
   allDropdowns.forEach(d => {
-    if (d !== dropdown) d.style.display = 'none';
+    if (d.querySelector('.dropdown-content') !== dropdown) {
+      d.classList.remove('open');
+    }
   });
 
   allArrows.forEach(a => {
-    if (a !== button.querySelector('.arrow')) a.textContent = '▼';
+    if (a !== arrow) a.classList.remove('rotate');
   });
 
-  if (dropdown.style.display === 'block') {
-    dropdown.style.display = 'none';
-    button.querySelector('.arrow').textContent = '▼';
+  const parentDropdown = button.closest('.dropdown');
+  const isOpen = parentDropdown.classList.toggle('open');
+  if (isOpen) {
+    arrow.classList.add('rotate');
   } else {
-    dropdown.style.display = 'block';
-    button.querySelector('.arrow').textContent = '▲';
+    arrow.classList.remove('rotate');
   }
 }
 
-// Close Dropdwown
+// Dropdown
 document.addEventListener('click', function (e) {
   if (!e.target.closest('.dropdown')) {
-    document.querySelectorAll('.dropdown-content').forEach(d => d.style.display = 'none');
-    document.querySelectorAll('.arrow').forEach(a => a.textContent = '▼');
+    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+    document.querySelectorAll('.arrow').forEach(a => a.classList.remove('rotate'));
   }
 });
 
