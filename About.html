@@ -11,39 +11,36 @@
 </head>
 
 <body>
+  <!--KUMAR-->
 <!--Navbar Begin-->
-  <nav>
-    <div class="h-12 flex items-center px-0.5">
-      <a href="index.html" id="topBarLogo">
+  <nav class="fixed flex w-full z-10 border-b-1 shadow-2xs backdrop:blur backdrop-blur justify-between p-3 ">
+    <div class="h-12 flex items-center px-5">
+      <a href="#" id="topBarLogo">
         <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-24 py-1 object-contain">
       </a>
     </div>
   
-    <div class="menu-container">
-      <div class="dropdown">
-        <button class="dropdown-toggle" onclick="toggleDropdown('photoDropdown', this)">
-          <i class="fa-solid fa-camera"></i> Photography <span class="arrow">▼</span>
-        </button>
-        <div id="photoDropdown" class="dropdown-content">
-          <a href="Prewedding.html">Pre Wedding</a>
-          <a href="wedding.html">Wedding</a>
-          <!-- <a href="#">Product</a>
-          <a href="#">Food</a> -->
-        </div>
-      </div>
-  
-      <div class="dropdown">
-        <button class="dropdown-toggle" onclick="toggleDropdown('videoDropdown', this)">
-          <i class="fa-solid fa-video"></i> Videography <span class="arrow">▼</span>
-        </button>
-        <div id="videoDropdown" class="dropdown-content">
-          <a href="wedding2.html">Wedding</a>
-          <!-- <a href="#">Commercial</a>
-          <a href="#">Event</a> -->
-        </div>
-      </div>
+  <div class="menu-container">
+  <div class="dropdown hidden w-full md:block md:w-auto">
+    <button class="dropdown-toggle" onclick="toggleDropdown('photoDropdown', this)">
+      <i class="fa-solid fa-camera"></i> Photography <span class="arrow">▼</span>
+    </button>
+    <div id="photoDropdown" class="dropdown-content">
+      <a href="Prewedding.html">Pre Wedding</a>
+      <a href="wedding.html">Wedding</a>
     </div>
-      <div id="hamburgerButton" class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <div class="dropdown hidden w-full md:block md:w-auto">
+    <button class="dropdown-toggle" onclick="toggleDropdown('videoDropdown', this)">
+      <i class="fa-solid fa-video"></i> Videography <span class="arrow">▼</span>
+    </button>
+    <div id="videoDropdown" class="dropdown-content">
+      <a href="wedding2.html">Wedding</a>
+    </div>
+  </div>
+  </div>
+      <div id="hamburgerButton" class="hamburger md:hidden" onclick="toggleMenu()">☰</div>
     </div>
   </nav>
 <!-- Navbar End -->
