@@ -12,7 +12,7 @@
 
 <body>
 <!--Navbar Begin1-->
-  <nav class="fixed flex w-full z-10 border-b-1 shadow-2xs backdrop:blur backdrop-blur justify-between p-3 ">
+  <nav id="navbar" class="fixed flex w-full z-50 shadow-md bg-white justify-between p-3 transitiion-all duration-300">
     <div class="h-12 flex items-center px-5">
       <a href="#" id="topBarLogo">
         <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-24 py-1 object-contain">
@@ -58,7 +58,7 @@
           <img src="IMG/Logo/SENADA Resize.png" alt="Senada Logo">
         </a>
     </div>
-    <div class="dropdown">
+    <div class="dropdown md:hidden">
       <button class="dropdown-toggle" onclick="toggleSidebarDropdown(this)">
         Photography <span class="arrow">▼</span>
       </button>
@@ -67,7 +67,7 @@
         <a href="Wedding.html">Wedding</a>
       </div>
     </div>
-    <div class="dropdown">
+    <div class="dropdown md:hidden">
       <button class="dropdown-toggle" onclick="toggleSidebarDropdown(this)">Videography<span class="arrow">▼</span>
       </button>
        <div id="videoDropdown" class="dropdown-content" >

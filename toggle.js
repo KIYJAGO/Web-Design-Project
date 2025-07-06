@@ -98,3 +98,17 @@ document.querySelectorAll('.faq-btn').forEach(btn =>
       document.querySelectorAll('.arrow').forEach(a => a.classList.remove('rotate'));
     }
   });
+
+  let lastScrollY = window.scrollY;
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > lastScrollY) {
+    // Scroll ke bawah → sembunyikan navbar
+    navbar.style.transform = 'translateY(-100%)';
+  } else {
+    // Scroll ke atas → tampilkan navbar
+    navbar.style.transform = 'translateY(0)';
+  }
+  lastScrollY = window.scrollY;
+});
