@@ -98,8 +98,8 @@ document.querySelectorAll('.faq-btn').forEach(btn =>
       document.querySelectorAll('.arrow').forEach(a => a.classList.remove('rotate'));
     }
   });
-
-  let lastScrollY = window.scrollY;
+//scro;; navbar
+let lastScrollY = window.scrollY;
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
