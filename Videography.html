@@ -12,9 +12,9 @@
 
 <body>
 <!--Navbar Begin-->
-  <nav class="fixed flex w-full z-10 border-b-1 shadow-2xs backdrop:blur backdrop-blur justify-between p-3 ">
+  <nav class="fixed flex w-full z-10 shadow-2xs backdrop:blur backdrop-blur justify-between p-3 ">
     <div class="h-12 flex items-center px-5">
-      <a href="#" id="topBarLogo">
+      <a href="index.html" id="topBarLogo">
         <img src="IMG/Logo/SENADA Resize.png" alt="Logo" class="h-24 py-1 object-contain">
       </a>
     </div>
@@ -47,16 +47,31 @@
 <!-- Side Menu Begin -->
 <div class="side-menu" id="sideMenu">
   <div class="top">
-    <div class="nav-logo" id="sideBarLogo">
-        <a href="index.html">
-          <img src="IMG/Logo/SENADA Resize.png" alt="Senada Logo">
-        </a>
+    <div class="nav-logo`" id="sideBarLogo">
+        <button class="btn-close font-bold cursor-pointer">X</button>
     </div>
-      <a href="Photography.html">Photography</a>
-      <a href="Videography.html">Videography</a>
+    <a href="Photography.html" class="font-bold hidden md:block">Photography</a>
+    <div class="dropdown md:hidden">
+      <button class="dropdown-toggle" onclick="toggleSidebarDropdown(this)">Photography<span class="arrow">▼</span>
+      </button>
+      <div class="dropdown-content">
+        <a href="Prewedding.html">Pre Wedding</a>
+        <a href="Wedding.html">Wedding</a>
+      </div>
+
+    </div>
+    <a href="Videography.html" class = "font-bold hidden md:block">Videography</a>
+    <div class="dropdown md:hidden">
+      <button class="dropdown-toggle" onclick="toggleSidebarDropdown(this)">Videography<span class="arrow">▼</span>
+      </button>
+       <div id="videoDropdown" class="dropdown-content">
+       <a href="wedding2.html">Wedding</a>
+    </div>
+
+    </div>
       <a href="About.html">About</a>
       <a href="Service.html">Service</a>
-      <a href="Contact.html">Contact</a>
+      <a href="Contact.html">F & Q</a>
   </div>
   <div class="bottom">
     <div class="contact-item">
@@ -69,7 +84,7 @@
       <a href="https://maps.app.goo.gl/pJCjfqzjXT8QCr5k9" target="_blank" class="icon"><i class="fa-solid fa-location-dot"></i><span>Jl. Apa Aja Lah No.24</span></a>
     </div>
     <div class="contact-item">
-      <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="icon"><i class="fa-regular fa-envelope"></i><span>wongirengjembuten365@gmail.com</span></a>
+      <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="icon"><i class="fa-regular fa-envelope"></i><span>senada@gmail.com.com</span></a>
     </div>
     <div class="powered">Bali 80361, Indonesia</div>
     <div class="powered-photo">&copy; Powered by | Photos by | Terms of Service | Privacy Policy</div>
@@ -85,7 +100,7 @@
   <div class="group relative">
   <img src="IMG/Background 1.jpg" alt="Bride" class="w-full aspect-[4/5] object-cover">
       <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
-          <a href="wedding2.html" class="absolute inset-0 flex items-center justify-center">
+          <a href="Content-Video.html" class="absolute inset-0 flex items-center justify-center">
           <!--Button-->
           <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
               <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
@@ -108,7 +123,7 @@
   <div class="group relative">
   <img src="IMG/Background 2.jpg" alt="Bride" class="w-full aspect-[4/5] object-cover">
       <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
-          <a href="wedding2.html" class="absolute inset-0 flex items-center justify-center">
+          <a href="Content-Video.html" class="absolute inset-0 flex items-center justify-center">
           <!--Button-->
           <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
               <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
@@ -131,7 +146,7 @@
   <div class="group relative">
   <img src="IMG/Background 3.jpg" alt="Bride" class="w-full aspect-[4/5] object-cover">
       <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
-           <a href="wedding2.html" class="absolute inset-0 flex items-center justify-center">
+           <a href="Content-Video.html" class="absolute inset-0 flex items-center justify-center">
           <!--Button-->
           <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
               <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
@@ -154,7 +169,7 @@
   <div class="group relative mt-6">
   <img src="IMG/Background 4.jpg" alt="Bride" class="w-full aspect-[4/5] object-cover">
       <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
-          <a href="wedding2.html" class="absolute inset-0 flex items-center justify-center">
+          <a href="Content-Video.html" class="absolute inset-0 flex items-center justify-center">
           <!--Button-->
           <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
               <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
@@ -177,7 +192,7 @@
   <div class="group relative mt-6">
   <img src="IMG/Background 5.jpg" alt="Bride" class="w-full aspect-[4/5] object-cover">
       <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
-          <a href="wedding2.html" class="absolute inset-0 flex items-center justify-center">
+          <a href="Content-Video.html" class="absolute inset-0 flex items-center justify-center">
           <!--Button-->
           <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
               <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
@@ -200,7 +215,7 @@
   <div class="group relative mt-6">
   <img src="IMG/Background 6.jpg" alt="Bride" class="w-full aspect-[4/5] object-cover">
       <div class="absolute inset-0 group-hover:bg-black/15 transition duration-850">
-          <a href="wedding2.html" class="absolute inset-0 flex items-center justify-center">
+          <a href="Content-Video.html" class="absolute inset-0 flex items-center justify-center">
           <!--Button-->
           <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-100">
               <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
@@ -219,8 +234,6 @@
     <p class="text-sm text-gray-700 mt-1">Learn from our couple! Here’s how to marry your soulmate and turn the most important day of your life into the most unforgettable one as well.</p>
     <footer class="bg-white border-t border-double border-gray-400 mt-8 pb-8">
 </div>
-
-
 </div>  
 <!--Main End-->
 
@@ -236,7 +249,7 @@
     
     <div class="text-sm/5 text-gray-600">
       <p class="text-xs mb-1">by appointment only</p>
-      <p class="text-xs mb-1"><a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="text-gray-800">wongirengjembuten365@gmail.com</a></p>
+      <p class="text-xs mb-1"><a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="text-gray-800">senada@gmail.com.com</a></p>
       <p class="text-xs mb-1">Jl. Uluwatu II No.54, Jimbaran, Kec. Kuta Sel., Kabupaten Badung</p>
       <p class="text-xs mb-1">Bali 80361, Indonesia</p>
     </div>
@@ -254,20 +267,6 @@
   </div>
 </footer>
 <!--Footer End-->
-<!-- Modal Video Preview -->
-<div id="youtubePreviewModal" class="fixed inset-0 bg-black/80 hidden opacity-0 transition-opacity duration-500 items-center justify-center z-50 cursor-pointer" onclick="redirectToYouTube()">
-  <div class="relative w-[90%] max-w-3xl aspect-video rounded-xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-500">
-    <img id="previewThumbnail" src="" alt="YouTube Preview" class="w-full h-full object-cover">
-    <div class="absolute inset-0 flex items-center justify-center">
-      <div class="w-20 h-20 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center shadow-md">
-        <svg class="w-10 h-10 text-black" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M6 4l10 6-10 6V4z"/>
-        </svg>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 <!--Toggle Script-->
 <script src="toggle.js"></script>

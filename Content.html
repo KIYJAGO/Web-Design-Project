@@ -11,8 +11,7 @@
 </head>
 
 <body>
-
-<!-- Navbar -->
+<!--Navbar Begin1-->
 <nav id="navbar" class="fixed flex w-full z-50 shadow-md bg-white justify-between p-3 transitiion-all duration-300">
   <div class="h-12 flex items-center px-5">
     <a href="index.html" id="topBarLogo">
@@ -20,28 +19,78 @@
     </a>
   </div>
 
-  <div class="menu-container">
-    <div class="dropdown hidden w-full md:block md:w-auto">
-      <button class="dropdown-toggle" onclick="toggleDropdown('photoDropdown', this)">
-        <i class="fa-solid fa-camera icon-camera "></i> Photography <span class="arrow">▼</span>
+<div class="menu-container">
+<div class="dropdown hidden w-full md:block md:w-auto">
+  <button class="dropdown-toggle" onclick="toggleDropdown('photoDropdown', this)">
+    <i class="fa-solid fa-camera icon-camera"></i> Photography <span class="arrow">▼</span>
+  </button>
+  <div id="photoDropdown" class="dropdown-content">
+    <a href="Prewedding.html">Pre Wedding</a>
+    <a href="wedding.html">Wedding</a>
+  </div>
+</div>
+
+<div class="dropdown hidden w-full md:block md:w-auto">
+  <button class="dropdown-toggle" onclick="toggleDropdown('videoDropdown', this)">
+    <i class="fa-solid fa-video icon-camera"></i> Videography <span class="arrow">▼</span>
+  </button>
+  <div id="videoDropdown" class="dropdown-content">
+    <a href="wedding2.html">Wedding</a>
+  </div>
+</div>
+</div>
+    <div id="hamburgerButton" class="hamburger md:block" onclick="toggleMenu()">☰</div>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+<!-- Side Menu Begin -->
+<div class="side-menu" id="sideMenu">
+  <div class="top">
+    <div class="nav-logo`" id="sideBarLogo">
+        <button class="btn-close font-bold cursor-pointer">X</button>
+    </div>
+    <a href="Photography.html" class="font-bold hidden md:block">Photography</a>
+    <div class="dropdown md:hidden">
+      <button class="dropdown-toggle" onclick="toggleSidebarDropdown(this)">Photography<span class="arrow">▼</span>
       </button>
-      <div id="photoDropdown" class="dropdown-content">
+      <div class="dropdown-content">
         <a href="Prewedding.html">Pre Wedding</a>
-        <a href="wedding.html">Wedding</a>
+        <a href="Wedding.html">Wedding</a>
       </div>
+
+    </div>
+    <a href="Videography.html" class = "font-bold hidden md:block">Videography</a>
+    <div class="dropdown md:hidden">
+      <button class="dropdown-toggle" onclick="toggleSidebarDropdown(this)">Videography<span class="arrow">▼</span>
+      </button>
+       <div id="videoDropdown" class="dropdown-content">
+       <a href="wedding2.html">Wedding</a>
     </div>
 
-    <div class="dropdown hidden w-full md:block md:w-auto">
-      <button class="dropdown-toggle" onclick="toggleDropdown('videoDropdown', this)">
-        <i class="fa-solid fa-video icon-camera"></i> Videography <span class="arrow">▼</span>
-      </button>
-      <div id="videoDropdown" class="dropdown-content">
-        <a href="wedding2.html">Wedding</a>
-      </div>
     </div>
+      <a href="About.html">About</a>
+      <a href="Service.html">Service</a>
+      <a href="Contact.html">F & Q</a>
   </div>
-  <div id="hamburgerButton" class="hamburger md:block" onclick="toggleMenu()"></div>
-</nav>
+  <div class="bottom">
+    <div class="contact-item">
+        <a href="https://wa.me/+6285339047862" target="_blank" class="icon"><i class="fa-brands fa-whatsapp"></i><span>+628123456789</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://www.instagram.com/senadapictures?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="icon"><i class="fa-brands fa-instagram"></i><span>@senadapictures</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://maps.app.goo.gl/pJCjfqzjXT8QCr5k9" target="_blank" class="icon"><i class="fa-solid fa-location-dot"></i><span>Jl. Apa Aja Lah No.24</span></a>
+    </div>
+    <div class="contact-item">
+      <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="icon"><i class="fa-regular fa-envelope"></i><span>senada@gmail.com.com</span></a>
+    </div>
+    <div class="powered">Bali 80361, Indonesia</div>
+    <div class="powered-photo">&copy; Powered by | Photos by | Terms of Service | Privacy Policy</div>
+  </div>
+</div>
+<!-- Side Menu End -->
 
 <!-- Hero Section -->
 <section class="hero-2" id="home">
@@ -49,7 +98,7 @@
 </section>
 
 <!-- Bali The Thousand Temples Description -->
-<section class="max-w-4xl mx-auto px-4 pt-20 pb-10">
+<section class="max-w-4xl mx-auto px-4 pt-10 pb-10">
   <h1 class="text-3xl font-semibold text-gray-900 mb-2">
     Bali, The Thousand Temples
   </h1>
@@ -64,7 +113,7 @@
   </p>
 </section>
 
-<!-- Judul Galeri (Rata Kiri & Sejajar dengan Judul Sebelumnya) -->
+<!-- Judul Galeri -->
 <section class="max-w-4xl mx-auto p-4">
   <div class="mb-5">
     <h2 class="text-3xl font-light underline decoration-black decoration-2">Gallery</h2>
@@ -239,7 +288,7 @@
     
     <div class="text-sm/5 text-gray-600">
       <p class="text-xs mb-1">by appointment only</p>
-      <p class="text-xs mb-1"><a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="text-gray-800">wongirengjembuten365@gmail.com</a></p>
+      <p class="text-xs mb-1"><a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=kiyrandom@gmail.com&tf=1" target="_blank" class="text-gray-800">senada@gmail.com.com</a></p>
       <p class="text-xs mb-1">Jl. Uluwatu II No.54, Jimbaran, Kec. Kuta Sel., Kabupaten Badung</p>
       <p class="text-xs mb-1">Bali 80361, Indonesia</p>
     </div>

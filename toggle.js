@@ -73,12 +73,10 @@ document.querySelectorAll('.faq-btn').forEach(btn =>
     }); 
   }); 
 
-   //dropdown sidebar
   function toggleSidebarDropdown(button) {
     const dropdown = button.parentElement;
     const arrow = button.querySelector('.arrow');
 
-    // Tutup dropdown lain jika ada
     document.querySelectorAll('.dropdown').forEach(d => {
       if (d !== dropdown) d.classList.remove('open');
     });
@@ -86,55 +84,54 @@ document.querySelectorAll('.faq-btn').forEach(btn =>
       if (a !== arrow) a.classList.remove('rotate');
     });
 
-    // Toggle dropdown sekarang
     const isOpen = dropdown.classList.toggle('open');
     arrow.classList.toggle('rotate', isOpen);
   }
 
-  // Tutup dropdown saat klik di luar
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.dropdown')) {
-      document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
-      document.querySelectorAll('.arrow').forEach(a => a.classList.remove('rotate'));
+// Tutup dropdown saat klik di luar
+document.addEventListener('click', function (e) {
+  if (!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+    document.querySelectorAll('.arrow').forEach(a => a.classList.remove('rotate'));
+  }
+});
+
+// Main Content Animation
+const reveals = document.querySelectorAll('.reveal');
+      
+window.addEventListener('scroll', () => {
+  reveals.forEach((el) => {
+    const top = el.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (top < windowHeight - 100) {
+      el.classList.add('opacity-100', 'translate-y-0');
+      el.classList.remove('opacity-0', 'translate-y-10');
     }
   });
-//scro;; navbar
+});
+
+//scroll navbar
 let lastScrollY = window.scrollY;
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > lastScrollY) {
-    // Scroll ke bawah → sembunyikan navbar
+
     navbar.style.transform = 'translateY(-100%)';
   } else {
-    // Scroll ke atas → tampilkan navbar
+
     navbar.style.transform = 'translateY(0)';
   }
   lastScrollY = window.scrollY;
 });
-function showYouTubePreview(url) {
-  const popup = document.getElementById("popupOverlay");
-  const iframe = document.querySelector("#popupVideo iframe");
-  
-  // Ekstrak ID video
-  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-  const match = url.match(regExp);
-  
-  if (match && match[2].length === 11) {
-    const videoId = match[2];
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-    popup.classList.add("active");
-    document.body.style.overflow = 'hidden';
-  } else {
-    alert('URL YouTube tidak valid!');
-  }
-}
 
-function closePopup() {
-  const popup = document.getElementById("popupOverlay");
-  const iframe = document.querySelector("#popupVideo iframe");
-  
-  popup.classList.remove("active");
-  iframe.src = '';
-  document.body.style.overflow = '';
-}
+// Video 
+const video = document.getElementById("bgVideo");
+video.addEventListener("click", () => {
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+});
