@@ -112,3 +112,29 @@ window.addEventListener('scroll', () => {
   }
   lastScrollY = window.scrollY;
 });
+function showYouTubePreview(url) {
+  const popup = document.getElementById("popupOverlay");
+  const iframe = document.querySelector("#popupVideo iframe");
+  
+  // Ekstrak ID video
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  
+  if (match && match[2].length === 11) {
+    const videoId = match[2];
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    popup.classList.add("active");
+    document.body.style.overflow = 'hidden';
+  } else {
+    alert('URL YouTube tidak valid!');
+  }
+}
+
+function closePopup() {
+  const popup = document.getElementById("popupOverlay");
+  const iframe = document.querySelector("#popupVideo iframe");
+  
+  popup.classList.remove("active");
+  iframe.src = '';
+  document.body.style.overflow = '';
+}
